@@ -1,0 +1,15 @@
+#include<stdio.h>
+#define fabrica 1.30
+#define consumidor 0.12
+
+int main(void){
+    float carro, total;
+
+    printf("Por favor informe o valor base do veiculo");
+    scanf("%f", &carro);
+
+    total = (carro*fabrica) + (carro*consumidor);
+
+    printf("O valor total é %.2f", total);
+
+}
