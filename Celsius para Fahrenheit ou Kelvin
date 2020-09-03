@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+int main(void){
+    float celsius, fahrenheit, kelvin
+
+
+    printf("Insira a temperatura em Celsius");
+    scanf("%f", &celsius);
+
+    kelvin = Celsius + 273;
+
+    fahrenheit = (9*celsius)/5 + 32;
+
+}
