@@ -10,5 +10,9 @@ int main(void){
     kelvin = Celsius + 273;
 
     fahrenheit = (9*celsius)/5 + 32;
+    
+    printf("a temperatura em Kelvi é %f e em Fahrenheit é %f", kelvin, fahrenheit);
+    
+    return 0;
 
 }
