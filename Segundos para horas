@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int main()
+{
+    int s, m, h;
+
+    printf("Digite a quantidade de segundos: ");
+    scanf("%d", &s);
+
+    m = s / 60;
+    h = m / 60;
+
+    m = m % 60;
+    h = h % 60;
+    s = s % 60;
+
+    printf("%d horas > %d minutos > %d segundos", h, m, s);
+
+    return 0;
+}
