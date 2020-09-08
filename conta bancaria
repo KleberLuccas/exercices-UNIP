@@ -1,0 +1,47 @@
+#include<stdio.h>
+
+int main(){
+
+    int n1, n2, n3, inverso, conta, soma, digito, aux;
+
+    printf("Digite 3 digitos da sua conta");
+    scanf("%d", &conta);
+
+    aux = conta; //backup dos digitos
+
+    //começo do calculo
+    n3 = conta % 10;
+    conta = conta / 10;
+
+    n2 = conta % 10;
+    conta = conta/10;
+
+    n1 = conta % 10;
+    conta = conta/10;
+
+    n1 = n1 * 1;
+    n2 = n2 * 10;
+    n3 = n3 * 100;
+
+    conta = aux;
+
+    inverso = n1 + n2 + n3;
+    soma = conta + inverso;
+
+    n1 = soma % 10;
+    n1 *= 1;
+    soma = soma/10;
+
+    n2 = soma % 10;
+    n2 *= 2;
+    soma = soma/10;
+
+    n3 = soma % 10;
+    n3 *= 3;
+
+    digito = (n1+n2+n3) % 10;
+
+    printf("/n Conta %d - %d, conta, digito");
+
+    return 0;
+}
