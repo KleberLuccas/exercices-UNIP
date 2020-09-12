@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+int main()
+{
+    int i = 0;
+
+    while (i != 0){
+        printf("Diferente de 0\n");
+    }
+    do {
+        printf("Não sei se é 0");
+    } while (i != 0);
+return 0;
+}
