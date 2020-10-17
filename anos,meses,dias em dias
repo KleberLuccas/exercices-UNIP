@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int main()
+{
+    int idade, meses, anos, dias;
+
+    printf("Insira os anos\n\n");
+    scanf("%d", &anos);
+    fflush(stdin);
+
+    printf("Insira os meses\n\n");
+    scanf("%d", &meses);
+    fflush(stdin);
+
+    printf("Insira os dias\n\n");
+    scanf("%d", &dias);
+    fflush(stdin);
+
+    idade = ((anos * 365) + (meses *30) + dias);
+
+    printf("%d", idade);
+}
