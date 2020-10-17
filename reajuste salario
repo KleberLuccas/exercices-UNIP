@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int main()
+{
+    float salario;
+
+    printf("Digite o salario\n");
+    scanf("%f", &salario);
+
+    if (salario > 0){
+    if (salario <= 350)
+    {
+        salario = salario*1.5;
+        printf("Com o reajuste, o salario foi para %0.2f", salario);
+    }
+    else if (salario > 350)
+    {
+        salario = salario*1.3;
+        printf("Com o reajuste, o salario foi para %0.2f", salario);
+    }
+    }
+    else
+        printf("Salario invalido");
+}
