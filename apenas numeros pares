@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int main()
+{
+    int n,contador, s, divisor, resultado;
+
+    printf("Insira o numero\n");
+    scanf("%d", &n);
+
+    for (contador = 1; contador <=n; contador++)
+    {
+        s = contador%10;
+        if ( s == 0 ||s == 2 || s == 4 || s == 6 || s == 8)
+            printf("\n%d\n", contador);
+        else
+        {
+
+        }
+    }
+}
