@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+int main()
+{
+    int contador = 0, rj = 0, bh = 0, sp = 0;
+    char cidade[3];
+
+    for (;;)
+    {
+        contador = contador+1;
+        printf("Insira a sigla do estado da pessoa %d\n", contador);
+        scanf(" %s", cidade);
+        fflush(stdin);
+
+        if (stricmp (cidade, "fim") == 0)
+            break;
+        else if (stricmp (cidade, "sp") == 0)
+        {
+            sp = sp+1;
+        }
+        else if (stricmp (cidade, "bh") == 0)
+        {
+            bh = bh+1;
+        }
+        else if (stricmp (cidade, "rj") == 0)
+        {
+            rj = rj+1;
+        }
+        else
+        {
+
+        }
+    }
+    printf("Foram cadastradas %d pessoas do RIO DE JANEIRO\n\n", rj);
+    printf("Foram cadastradas %d pessoas de SAO PAULO\n\n", sp);
+    printf("Foram cadastrados %d pessoas de BELO HORIZONTE\n", bh);
+    getch();
+    return 0;
+}
