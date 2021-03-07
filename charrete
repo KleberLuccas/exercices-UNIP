@@ -1,0 +1,20 @@
+#include<stdio.h>
+#define tres 8.50
+#define uma 3.50
+
+int main()
+{
+    int hora, hora2;
+    float resultado;
+
+    printf("Quantas horas usou: ");
+    scanf("%d", &hora);
+
+    hora2 = hora;
+    hora = hora%3;
+    hora2 = hora2/3;
+
+    resultado = hora*uma + hora2*tres;
+
+    printf("O valor total é: %0.2f", resultado);
+}
