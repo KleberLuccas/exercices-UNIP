@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<string.h>
+#define residencial_fixo 5.00
+#define residencial_variavel 0.05
+#define comercial_fixo 500.00
+#define comercial_variavel 0.25
+#define industrial_fixo 800.00
+#define industrial_variavel 0.04
+
+int main()
+{
+    char nome[50];
+    int quantidade, pagar;
+    printf("Insira o tipo de consumidor");
+    scanf("%s", &nome);
+    printf("Insira a quantidade consumida");
+    scanf("%d", &quantidade);
+    if (quantidade <=0){
+    if (stgcmp(nome, "residencial")==0){
+        pagar = residencial_fixo + residencial_variavel*quantidade;
+        printf("%d", pagar);
+        }
+    else if (stgcmp(nome, "comercial")==0){
+            if (quantidade <= 80){
+            pagar = comercial_fixo;
+            printf("%d", pagar);
+            }
+            else{
+                pagar = comercial_fixo + comercial_variavel * (quantidade - 80);
+                printf("%d", pagar);
+            }
+    }
+        else if (stgcmp(nome, "industrial")==0){
+        if (quantidade <=100){
+            pagar = industrial_fixo*quantidade;
+            printf("%d", pagar);
+        }
+        else {
+            pagar = industrial_fixo + industrial_variavel * (quantidade - 100);
+            printf("%d", pagar);
+        }
+    }
+    else
+        printf("Nome invalido");
+    }
+else
+    printf("O numero é inferior ou igual a 0");
+
+return 0;
+}

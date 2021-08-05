@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+int main(){
+    float salario, salario_familia;
+    int filhos, horas;
+
+    printf("Escreva o numero de horas trabalhadas");
+    scanf("%d", &horas);
+
+    printf("Escreva o valor hora do funcionario");
+    scanf("%f", &salario);
+
+    printf("Escreva a quantidade de filhos com -14 anos");
+    scanf("%d", &filhos);
+
+    printf("Escreva o valor do salário familia");
+    scanf("%f", &salario_familia);
+
+    salario = salario*horas;
+    salario_familia = salario_familia*filhos;
+    salario = salario*salario_familia;
+
+    printf("O salario do funcionario é: %.2f", salario);
+
+    return 0;
+}

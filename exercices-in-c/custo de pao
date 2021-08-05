@@ -1,0 +1,60 @@
+#include<stdio.h>
+
+int main()
+{
+    float v_pao, v_farinha, v_agua, v_fermento, v_kwh, v_custo, v_venda,kg_pao,
+    kg_farinha, lt_agua, kg_fermento, kwh, imposto;
+
+    printf("Digite o valor da farinha\n");
+    scanf("%f", &v_farinha);
+    fflush(stdin);
+
+    printf("Digite a quantidade de farinha em kg\n");
+    scanf("%f", &kg_farinha);
+    fflush(stdin);
+
+    printf("Digite o valor da agua\n");
+    scanf("%f", &v_agua);
+    fflush(stdin);
+
+    printf("Digite a quantidade de agua em lt\n");
+    scanf("%f", &lt_agua);
+    fflush(stdin);
+
+    printf("Digite o valor do fermento\n");
+    scanf("%f", &v_fermento);
+    fflush(stdin);
+
+    printf("Digite a quantidade de fermento em kg\n");
+    scanf("%f", &kg_fermento);
+    fflush(stdin);
+
+    printf("Digite o valor medio da energia\n");
+    scanf("%f", &v_kwh);
+    fflush(stdin);
+
+    printf("Digite a energia gasta em KW/H\n");
+    scanf("%f", &kwh);
+    fflush(stdin);
+
+    if (v_farinha != 0 && kg_farinha != 0 &&v_agua != 0 && lt_agua != 0 &&
+         v_fermento != 0 && kg_fermento != 0 && v_kwh != 0 && kwh != 0)
+    {
+        v_farinha = v_farinha*kg_farinha;
+        v_agua = v_agua*lt_agua;
+        v_fermento = v_fermento*kg_fermento;
+        v_kwh = v_kwh*kwh;
+
+        v_custo = v_farinha + v_agua + v_fermento + v_kwh;
+
+        v_venda = v_custo * 1.3;
+
+        printf("O valor de custo e %0.2f\n", v_custo);
+        printf("O valor de venda e %0.2f\n", v_venda);
+    }
+    else
+        printf("Algum dos valores é igual a 0");
+
+    return 0;
+
+}

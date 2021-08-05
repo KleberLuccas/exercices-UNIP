@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+int main()
+{
+    int n1,n2,n3,n4,n5, backup;
+
+    printf("Digite os numeros");
+    scanf("%d", &n1);
+
+    backup = n1;
+
+    n5 = n1%10;
+    n1 = n1/10;
+    n4 = n1%10;
+    n1 = n1/10;
+    n3 = n1%10;
+    n1 = n1/10;
+    n2 = n1%10;
+    n1 = n1/10;
+
+    n2 = ((n5*10000)+ (n4*1000) + (n3*100) + (n2*10) + n1);
+
+    if (n2 == backup)
+        printf("numero %d e um palindromo", backup);
+    else
+        printf("O numero %d nao e um palindromo", backup);
+return 0;
+}
